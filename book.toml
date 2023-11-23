@@ -5,3 +5,6 @@ multilingual = false
 src = "src"
 title = "Haskell By Practice"
 description="Learn Haskell by practice through challenging examples, exercises and projects. Written by Ibn Aleem"
+
+[output.html]
+mathjax-support = true
