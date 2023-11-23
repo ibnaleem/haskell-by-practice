@@ -2,4 +2,4 @@
 [Homepage](../README.md)
 
 # Basics
-- [Functions](./Functions.md)
+- [Functions](./Basics/Functions.md)
