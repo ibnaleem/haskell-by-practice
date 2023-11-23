@@ -1,4 +1,4 @@
 # Summary
-[Introduction](../README.md)
+[Homepage](../README.md)
 
 - [Chapter 1](./chapter_1.md)
