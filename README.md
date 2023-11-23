@@ -95,3 +95,12 @@ Head over to the [original repository](https://github.com/ibnaleem/haskell-by-pr
 2. Select your forked repository and the branch containing your changes.
 3. Provide a clear and informative title for your pull request, and use the description box to explain the modifications you have made. **_Your pull request will be closed if you do not specify the changes you've made._**
 4. Finally, click on the "Create pull request" button to submit your changes.
+
+
+## Built With
+[mdBook](https://rust-lang.github.io/mdBook/index.html)
+
+## PGP Fingerprint
+```
+2024 7EC0 23F2 769E 6618  1C0F 581B 4A2A 862B BADE
+```
