@@ -8,3 +8,6 @@ description="Learn Haskell by practice through challenging examples, exercises a
 
 [output.html]
 mathjax-support = true
+
+[output.html.playground]
+editable = true
