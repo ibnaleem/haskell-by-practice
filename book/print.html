@@ -91,7 +91,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Homepage</a></li><li class="chapter-item expanded affix "><li class="part-title">Basics</li><li class="chapter-item expanded "><a href="Basics/Functions.html"><strong aria-hidden="true">1.</strong> Functions</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Homepage</a></li><li class="chapter-item expanded affix "><a href="Why-Haskell.html">Why Haskell?</a></li><li class="chapter-item expanded affix "><a href="Prerequisites.html">Prerequisites</a></li><li class="chapter-item expanded affix "><a href="Resources.html">Resources</a></li><li class="chapter-item expanded affix "><li class="part-title">Basics</li><li class="chapter-item expanded "><a href="Basics/Functions.html"><strong aria-hidden="true">1.</strong> Functions</a></li><li class="chapter-item expanded "><a href="Basics/Ifs-and-Lets.html"><strong aria-hidden="true">2.</strong> Ifs and Lets</a></li><li class="chapter-item expanded "><a href="Basics/Lists.html"><strong aria-hidden="true">3.</strong> Lists</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -264,6 +264,26 @@ $ git commit -m &quot;Your commit message&quot;
 <h2 id="pgp-fingerprint"><a class="header" href="#pgp-fingerprint">PGP Fingerprint</a></h2>
 <pre><code>2024 7EC0 23F2 769E 6618  1C0F 581B 4A2A 862B BADE
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="why-haskell"><a class="header" href="#why-haskell">Why Haskell?</a></h1>
+<p>In the ever-evolving landscape of programming languages, Haskell stands out as a unique and powerful choice that offers distinct benefits to developers. Learning Haskell teaches code reliability, conciseness, and a deep understanding of functional programming principles.</p>
+<p>Firstly, Haskell's strong type system and static typing provide a robust foundation for building reliable and bug-free software. The compiler's ability to catch type-related errors at compile-time rather than runtime significantly reduces the likelihood of runtime errors, leading to more robust and maintainable code. This not only enhances the quality of the software but also streamlines the debugging process, making it more efficient and less error-prone.</p>
+<p>Secondly, Haskell's functional programming paradigm introduces a fresh perspective on problem-solving. By encouraging immutability and emphasizing pure functions, Haskell promotes a declarative style of programming that focuses on what the code should accomplish rather than how it should achieve it. This results in concise and expressive code that is often easier to reason about, leading to increased productivity and code readability.</p>
+<p>Furthermore, Haskell's lazy evaluation strategy allows developers to express infinite data structures and perform computations more efficiently. This can be particularly advantageous in scenarios where resource efficiency is crucial, such as in algorithms dealing with large datasets or complex mathematical computations.</p>
+<p>Additionally, Haskell serves as an excellent gateway to mastering concepts fundamental to computer science, such as monads and type theory. These concepts, initially perceived as challenging, become more approachable through Haskell's syntax and semantics. As a result, learning Haskell not only equips developers with a powerful programming language but also deepens their understanding of theoretical concepts that transcend specific languages.</p>
+<p>The decision to learn Haskell is a strategic one, offering developers a unique skill set that enhances code reliability, promotes a functional programming mindset, and facilitates a deeper understanding of fundamental computer science concepts. As the demand for versatile and skilled programmers continues to grow, embracing Haskell as part of one's toolkit can open doors to exciting opportunities and enrich one's programming journey.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h1>
+<p>Unlike imperative programming languages, <a href="https://github.com/ibnaleem/haskell-by-practice">Haskell By Practice</a> assumes you have <em>some</em> knowledge in imperative programming. The following prerequisites are required and will not be explained in this book:</p>
+<ul>
+<li>Datatypes </li>
+<li>Functions</li>
+</ul>
+<p>Loops, classes, inheritance, are not included in Haskell; therefore, you are only expected to know what strings, integers, lists, and tuples are, as well as functions and how you call them.</p>
+<p>Knowledge of Haskell syntax is a plus, but not required since this book aims to teach it to you through exercises.</p>
+<p>If you're looking to learn theorectical concepets in Haskell, please visit the <a href="Resources.html">Resources</a> page. </p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="resources"><a class="header" href="#resources">Resources</a></h1>
+<p><a href="https://www.youtube.com/playlist?list=PLe7Ei6viL6jGp1Rfu0dil1JH1SHk9bgDV">43 Videos Covering Haskell for Imperative Programmers - Playlist</a> </p>
+<p><a href="https://github.com/ibnaleem/CS-Resources/blob/main/Languages/Learn%20You%20a%20Haskell%20for%20Great%20Good.pdf"><em>Learn You a Haskell for Great Good</em> by Miran Lipovača</a></p>
+<p><em>more to be added</em></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="functions"><a class="header" href="#functions">Functions</a></h1>
 <p>What makes Haskell a unique language is its requirement of functions; unlike other languages where you can declare variables and classes, Haskell forces you to use pure functions that must return a value to compile. We will explore exercises related to the I/O paradigm in Haskell in the I/O Chapter. For now, complete the following exercises.</p>
 <h2 id="exercise-1-1"><a class="header" href="#exercise-1-1">Exercise 1:</a></h2>
@@ -336,6 +356,87 @@ ghci&gt; quad 1 -2 1
 1.0
 </code></pre>
 <p>For your convinience, we have changed \( \pm \) to \( + \) in \( -b \pm \sqrt{b^2 - 4ac} \)</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ifs-and-lets"><a class="header" href="#ifs-and-lets">Ifs and Lets</a></h1>
+<p>Programs will require conditions, or else they will run into errors or not produce the result we are aiming for. This section covers exercises related to <code>if</code> and <code>let</code> expressions in Haskell.</p>
+<h2 id="exercise-1-if-expressions"><a class="header" href="#exercise-1-if-expressions">Exercise 1: If Expressions</a></h2>
+<p>Write a function <code>gt10</code> that takes an argument <code>x</code> that returns <code>&quot;yes&quot;</code> if <code>x</code> is greater than 10, otherwise it returns <code>&quot;no&quot;</code></p>
+<pre><code>ghci&gt; gt10 9
+&quot;no&quot;
+ghci&gt; 11
+&quot;yes&quot; 
+</code></pre>
+<h2 id="exercise-2-if-expressions"><a class="header" href="#exercise-2-if-expressions">Exercise 2: If Expressions</a></h2>
+<p>What is wrong with the following code?:</p>
+<pre><code class="language-haskell">gt10 x = if x &gt; 10 then 1 else &quot;no&quot;
+</code></pre>
+<pre><code>&lt;interactive&gt;:3:25: error:
+    • Could not deduce (Num String) arising from the literal ‘1’
+      from the context: (Ord a, Num a)
+        bound by the inferred type of gt10 :: (Ord a, Num a) =&gt; a -&gt; String
+        at &lt;interactive&gt;:3:1-35
+    • In the expression: 1
+      In the expression: if x &gt; 10 then 1 else &quot;no&quot;
+      In an equation for ‘gt10’: gt10 x = if x &gt; 10 then 1 else &quot;no&quot;
+</code></pre>
+<h2 id="exercise-3-if-expressions"><a class="header" href="#exercise-3-if-expressions">Exercise 3: If Expressions</a></h2>
+<p>Write a function <code>computeExpression</code> that takes two arguments <code>a</code> and <code>b</code>, and returns <code>(a + 12)</code> if \( a &gt; 10 ) and \( b &lt; 20 ), otherwise it returns the minimum of <code>a</code> and <code>b</code>.</p>
+<pre><code>ghci&gt; computeExpression 12 2
+24
+ghci&gt; computeExpression 12 20
+12
+ghci&gt; computeExpression 12 12
+12
+ghci&gt; computeExpression 14 19
+26
+</code></pre>
+<h2 id="exercise-4-if-expressions"><a class="header" href="#exercise-4-if-expressions">Exercise 4: If Expressions</a></h2>
+<p>Create a function <code>mixedOperation</code> that takes two arguments, <code>a</code> and <code>b</code>. If \( a \neq b ), the function should return \( a ) if \( a = 1 ) and \( b ) otherwise. If \( a = b ), the function should return 0.</p>
+<pre><code>ghci&gt; mixedOperation 10 10
+0
+ghci&gt; mixedOperation 10 12
+12
+ghci&gt; mixedOperation 1 12
+1
+</code></pre>
+<h2 id="exercise-5-if-expressions"><a class="header" href="#exercise-5-if-expressions">Exercise 5: If Expressions</a></h2>
+<p>What will the following expressions evaluate?</p>
+<pre><code class="language-haskell">if (1 == 1 &amp;&amp; 2 /= 3 &amp;&amp; 3 &lt; 4) then 1 else 0
+
+if 1 &gt; 0 then (if 1+1 /= 2 then 4 else 2) else 1
+
+if (if True then False else True) then &quot;Which&quot; else &quot;One?&quot;
+</code></pre>
+<blockquote>
+<p>💡 Try to break down the expressions by precedence to solve this exercise.</p>
+</blockquote>
+<h2 id="exercise-6-let-expressions"><a class="header" href="#exercise-6-let-expressions">Exercise 6: Let Expressions</a></h2>
+<p>Take the following expression and convert it into a <code>let</code> expression:</p>
+<pre><code class="language-haskell">(x * x - 4) + sqrt (x * x - 4)
+let s = ?
+</code></pre>
+<h2 id="exercise-7-let-expressions"><a class="header" href="#exercise-7-let-expressions">Exercise 7: Let Expressions</a></h2>
+<p>Write a <code>let</code> expression that take bindings <code>a</code> and <code>b</code> and sum them up</p>
+<h2 id="exercise-8-let-expressions"><a class="header" href="#exercise-8-let-expressions">Exercise 8: Let Expressions</a></h2>
+<p>The following expression throws an error:</p>
+<pre><code class="language-haskell">func x = let a = x * x; a = a + 1 in a
+</code></pre>
+<pre><code></code></pre>
+<p><interactive>:4:5: error:
+Conflicting definitions for ‘a’
+Bound at: <interactive>:4:5
+<interactive>:4:16</p>
+<pre><code>Fix the `let` such that no errors persist.
+</code></pre>
+<p>ghci&gt; func 5
+26</p>
+<pre><code>
+## Exercise 9: Let Expressions
+Bindings `a` and `b` are set to 1 and 2 (in that order) and calling the max function on them will return 2.
+```ghci&gt; max a b
+2
+</code></pre>
+<p>Write <code>let</code> expressions (in GHCi) and call the max function on them like shown above.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lists"><a class="header" href="#lists">Lists</a></h1>
 
                     </main>
 

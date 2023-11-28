@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Functions - Haskell By Practice</title>
+        <title>Why Haskell? - Haskell By Practice</title>
 
 
         <!-- Custom HTML head -->
@@ -12,21 +12,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../favicon.svg">
-        <link rel="shortcut icon" href="../favicon.png">
-        <link rel="stylesheet" href="../css/variables.css">
-        <link rel="stylesheet" href="../css/general.css">
-        <link rel="stylesheet" href="../css/chrome.css">
-        <link rel="stylesheet" href="../css/print.css" media="print">
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="../highlight.css">
-        <link rel="stylesheet" href="../tomorrow-night.css">
-        <link rel="stylesheet" href="../ayu-highlight.css">
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
@@ -37,7 +37,7 @@
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
-            var path_to_root = "../";
+            var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
@@ -90,7 +90,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">Homepage</a></li><li class="chapter-item expanded affix "><a href="../Why-Haskell.html">Why Haskell?</a></li><li class="chapter-item expanded affix "><a href="../Prerequisites.html">Prerequisites</a></li><li class="chapter-item expanded affix "><a href="../Resources.html">Resources</a></li><li class="chapter-item expanded affix "><li class="part-title">Basics</li><li class="chapter-item expanded "><a href="../Basics/Functions.html" class="active"><strong aria-hidden="true">1.</strong> Functions</a></li><li class="chapter-item expanded "><a href="../Basics/Ifs-and-Lets.html"><strong aria-hidden="true">2.</strong> Ifs and Lets</a></li><li class="chapter-item expanded "><a href="../Basics/Lists.html"><strong aria-hidden="true">3.</strong> Lists</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Homepage</a></li><li class="chapter-item expanded affix "><a href="Why-Haskell.html" class="active">Why Haskell?</a></li><li class="chapter-item expanded affix "><a href="Prerequisites.html">Prerequisites</a></li><li class="chapter-item expanded affix "><a href="Resources.html">Resources</a></li><li class="chapter-item expanded affix "><li class="part-title">Basics</li><li class="chapter-item expanded "><a href="Basics/Functions.html"><strong aria-hidden="true">1.</strong> Functions</a></li><li class="chapter-item expanded "><a href="Basics/Ifs-and-Lets.html"><strong aria-hidden="true">2.</strong> Ifs and Lets</a></li><li class="chapter-item expanded "><a href="Basics/Lists.html"><strong aria-hidden="true">3.</strong> Lists</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -144,7 +144,7 @@
                     <h1 class="menu-title">Haskell By Practice</h1>
 
                     <div class="right-buttons">
-                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
 
@@ -173,88 +173,23 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="functions"><a class="header" href="#functions">Functions</a></h1>
-<p>What makes Haskell a unique language is its requirement of functions; unlike other languages where you can declare variables and classes, Haskell forces you to use pure functions that must return a value to compile. We will explore exercises related to the I/O paradigm in Haskell in the I/O Chapter. For now, complete the following exercises.</p>
-<h2 id="exercise-1"><a class="header" href="#exercise-1">Exercise 1:</a></h2>
-<p>Write a function that adds two to its argument.</p>
-<pre><code class="language-haskell">add_two :: Int -&gt; Int
-add_two x = ?
-</code></pre>
-<h2 id="exercise-2"><a class="header" href="#exercise-2">Exercise 2:</a></h2>
-<p>Complete this function that should return the double of its argument:</p>
-<pre><code class="language-haskell">double_me :: Int -&gt; Int
-double_me x = ?
-</code></pre>
-<blockquote>
-<p>There are <strong>2</strong> solutions to this exercise.</p>
-</blockquote>
-<h2 id="exercise-3"><a class="header" href="#exercise-3">Exercise 3:</a></h2>
-<p>Write a function <code>add_squares</code> that takes 2 arguments <code>x</code> and <code>y</code>, squares them, then adds them together.</p>
-<pre><code class="language-haskell">add_squares :: Int -&gt; Int -&gt; Int
-add_squares x y = ?
-</code></pre>
-<h2 id="exercise-4"><a class="header" href="#exercise-4">Exercise 4:</a></h2>
-<p>Write a function <code>max_three</code> that takes 3 arguments <code>x</code>, <code>y</code> and <code>z</code>; the purpose of this function is to find the maximum value between 3 arguments. For example:</p>
-<pre><code>ghci&gt; max_three 1 2 3
-3
-</code></pre>
-<blockquote>
-<p>Moving forward, you will not be given the boilerplate; you will write the functions in Haskell syntax yourself. The only time boilerplate will be given is when you're tasked to debug code.</p>
-</blockquote>
-<h2 id="exercise-5"><a class="header" href="#exercise-5">Exercise 5:</a></h2>
-<p>Write a function <code>pow3</code> with one argument <code>x</code> that returns 3 to the power <code>x</code></p>
-<h2 id="exercise-6"><a class="header" href="#exercise-6">Exercise 6:</a></h2>
-<p>Write a function <code>all_equal</code> with three arguments <code>x</code>, <code>y</code> and
-<code>z</code> that returns <code>True</code> if <code>x</code> is equal to <code>y</code> and <code>y</code> is equal to <code>z</code>.</p>
-<blockquote>
-<p>❌  You are not allowed to use <code>if</code> expressions.</p>
-</blockquote>
-<h2 id="exercise-7"><a class="header" href="#exercise-7">Exercise 7:</a></h2>
-<p>Write a function <code>minplus</code> with four arguments <code>a</code>, <code>b</code>, <code>c</code> and <code>d</code> that computes the sum of the minimums between a, b and c, d. For example, <code>minplus</code> should compute the sum of 1 and 3 since 1 and 3 are the minimum from the given arguments 1,2,3,4.</p>
-<pre><code>ghci&gt; minplus 1 2 3 4
-4
-</code></pre>
-<h2 id="exercise-8"><a class="header" href="#exercise-8">Exercise 8:</a></h2>
-<p>Write a function minFour with four arguments <code>a</code>, <code>b</code>, <code>c</code> and <code>d</code> that returns the minimum of its four arguments. Examples:</p>
-<pre><code>ghci&gt; minFour 1 2 3 4
-1
-ghci&gt; minFour 33 66 99 100
-33
-</code></pre>
-<h2 id="exercise-9"><a class="header" href="#exercise-9">Exercise 9:</a></h2>
-<p>To convert a two-bit binary number (represented as \( \mathrm{bin} \)) to decimal:</p>
-<p>\[ \mathrm{bin} = b_{1} \cdot 2^1 + b_{2} \cdot 2^0 \]</p>
-<p>Thus, 11 in binary becomes 1 × 2 + 1 = 3</p>
-<p>Write a function <code>pow2</code> that raises 2 to its argument <code>x</code>. For example:</p>
-<pre><code>ghci&gt; pow2 5
-32
-</code></pre>
-<p>Additionally, create another function <code>bin_to_dec</code> that takes 2 arguments <code>b1</code> <code>b2</code> and uses the formula above to calculate \( \mathrm{bin} \)</p>
-<blockquote>
-<p>💡 You will need to use <code>pow2</code> to sum up <code>b1</code> and <code>b2</code>. Remember that the formula states <code>b1</code> must multiply by 2¹, and <code>b2</code> by 2⁰, then they are both summed up.</p>
-</blockquote>
-<h2 id="exercise-95"><a class="header" href="#exercise-95">Exercise 9.5:</a></h2>
-<p>Modify <code>bin_to_dec</code> function such that it can convert 4 bit binary numbers.</p>
-<h2 id="exercise-10"><a class="header" href="#exercise-10">Exercise 10:</a></h2>
-<p>Write a function <code>quad</code> that computes the quadratic formula on 3 of its arguments <code>a</code>, <code>b</code> and <code>c</code>.</p>
-<p>\[ x = \frac{{-b + \sqrt{b^2 - 4ac}}}{{2a}} \]</p>
-<p>Examples:</p>
-<pre><code>ghci&gt; quad 1 16 0
-0
-ghci&gt; quad 1 -2 1
-1.0
-</code></pre>
-<p>For your convinience, we have changed \( \pm \) to \( + \) in \( -b \pm \sqrt{b^2 - 4ac} \)</p>
+                        <h1 id="why-haskell"><a class="header" href="#why-haskell">Why Haskell?</a></h1>
+<p>In the ever-evolving landscape of programming languages, Haskell stands out as a unique and powerful choice that offers distinct benefits to developers. Learning Haskell teaches code reliability, conciseness, and a deep understanding of functional programming principles.</p>
+<p>Firstly, Haskell's strong type system and static typing provide a robust foundation for building reliable and bug-free software. The compiler's ability to catch type-related errors at compile-time rather than runtime significantly reduces the likelihood of runtime errors, leading to more robust and maintainable code. This not only enhances the quality of the software but also streamlines the debugging process, making it more efficient and less error-prone.</p>
+<p>Secondly, Haskell's functional programming paradigm introduces a fresh perspective on problem-solving. By encouraging immutability and emphasizing pure functions, Haskell promotes a declarative style of programming that focuses on what the code should accomplish rather than how it should achieve it. This results in concise and expressive code that is often easier to reason about, leading to increased productivity and code readability.</p>
+<p>Furthermore, Haskell's lazy evaluation strategy allows developers to express infinite data structures and perform computations more efficiently. This can be particularly advantageous in scenarios where resource efficiency is crucial, such as in algorithms dealing with large datasets or complex mathematical computations.</p>
+<p>Additionally, Haskell serves as an excellent gateway to mastering concepts fundamental to computer science, such as monads and type theory. These concepts, initially perceived as challenging, become more approachable through Haskell's syntax and semantics. As a result, learning Haskell not only equips developers with a powerful programming language but also deepens their understanding of theoretical concepts that transcend specific languages.</p>
+<p>The decision to learn Haskell is a strategic one, offering developers a unique skill set that enhances code reliability, promotes a functional programming mindset, and facilitates a deeper understanding of fundamental computer science concepts. As the demand for versatile and skilled programmers continues to grow, embracing Haskell as part of one's toolkit can open doors to exciting opportunities and enrich one's programming journey.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../Resources.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../Basics/Ifs-and-Lets.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="Prerequisites.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -264,11 +199,11 @@ ghci&gt; quad 1 -2 1
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../Resources.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../Basics/Ifs-and-Lets.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="Prerequisites.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
@@ -299,13 +234,13 @@ ghci&gt; quad 1 -2 1
         </script>
 
 
-        <script src="../elasticlunr.min.js"></script>
-        <script src="../mark.min.js"></script>
-        <script src="../searcher.js"></script>
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
 
-        <script src="../clipboard.min.js"></script>
-        <script src="../highlight.js"></script>
-        <script src="../book.js"></script>
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
 

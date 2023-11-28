@@ -2,6 +2,8 @@
 
 What makes Haskell a unique language is its requirement of functions; unlike other languages where you can declare variables and classes, Haskell forces you to use pure functions that must return a value to compile. We will explore exercises related to the I/O paradigm in Haskell in the I/O Chapter. For now, complete the following exercises.
 
+> We have simplified exercises by creating template files. Click here to use a template file to follow along with this exercise. *Learn More*
+
 ## Exercise 1:
 Write a function that adds two to its argument.
 ```haskell
